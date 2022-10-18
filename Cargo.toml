@@ -1,6 +1,6 @@
 [package]
 name = "shroud"
-version = "0.1.4"
+version = "0.1.5"
 edition = "2021"
 description = "Universal library for discovering rendering functions of render engines: DirectX9, DirectX10, DirectX11, DirectX12, OpenGL, Vulkan"
 license = "MIT"
@@ -30,7 +30,7 @@ directx10 = ["dep:scopeguard", "winapi/winuser"]
 directx11 = ["dep:scopeguard", "winapi/winuser","winapi/d3d11"]
 directx12 = ["dep:scopeguard", "winapi/winuser","winapi/dxgi","winapi/d3d12"]
 
-[package.metadata.doc.srs]
+[package.metadata.doc.rs]
 features = ["directx9", "directx10", "directx11", "directx12", "opengl", "vulkan"]
 default-target = "x86_64-pc-windows-msvc"
 targets = ["x86_64-pc-windows-msvc", "i686-pc-windows-msvc"]
