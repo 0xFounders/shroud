@@ -367,6 +367,7 @@ pub enum OpenGlWglMethods {
     wglUseFontBitmapsW,
     wglUseFontOutlinesA,
     wglUseFontOutlinesW,
+    wglSwapBuffers,
 }
 
 pub struct OpenGlMethods {

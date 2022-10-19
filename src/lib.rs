@@ -5,6 +5,9 @@ use strum_macros::EnumIter;
 use thiserror::Error;
 use winapi::{shared::minwindef::HMODULE, um::libloaderapi::GetModuleHandleA};
 
+#[cfg(not(target_os = "windows"))]
+compile_error!("only windows is supported");
+
 #[cfg(any(
     feature = "directx9",
     feature = "directx10",
@@ -71,7 +74,7 @@ pub enum ShroudError {
     #[error("Std Nul Error `{0:#?}`")]
     StdNulError(#[from] NulError),
 
-    #[error("Error opening handle for dll: ")]
+    #[error("Error opening handle for dll: `{0:#?}`")]
     OpenHandleError(String),
 
     #[cfg(feature = "directx9")]

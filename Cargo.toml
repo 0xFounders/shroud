@@ -21,7 +21,7 @@ strum = "0.24.1"
 strum_macros = "0.24.3"
 
 [features]
-default = ["directx9", "directx10", "directx11", "directx12", "opengl", "vulkan"]
+default = []
 
 opengl = []
 vulkan = []
