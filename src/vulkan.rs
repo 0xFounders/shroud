@@ -151,6 +151,12 @@ pub struct VulkanMethods {
     static_methods: Vec<*const usize>,
 }
 
+impl VulkanMethods {
+    pub fn static_methods(&self) -> &Vec<*const usize> {
+        &self.static_methods
+    }
+}
+
 impl std::fmt::Debug for VulkanMethods {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         writeln!(f, "Vulkan Method Table")?;

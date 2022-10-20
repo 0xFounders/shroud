@@ -375,6 +375,16 @@ pub struct OpenGlMethods {
     static_methods: Vec<*const usize>,
 }
 
+impl OpenGlMethods {
+    pub fn wgl_methods(&self) -> &Vec<*const usize> {
+        &self.wgl_methods
+    }
+
+    pub fn static_methods(&self) -> &Vec<*const usize> {
+        &self.static_methods
+    }
+}
+
 impl std::fmt::Debug for OpenGlMethods {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         writeln!(f, "OpenGl Method Table")?;

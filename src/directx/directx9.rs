@@ -142,6 +142,12 @@ pub struct DirectX9Methods {
     device_vmt: Vec<*const usize>,
 }
 
+impl DirectX9Methods {
+    pub fn device_vmt(&self) -> &Vec<*const usize> {
+        &self.device_vmt
+    }
+}
+
 impl std::fmt::Debug for DirectX9Methods {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         writeln!(f, "DirectX9 Method Table")?;

@@ -234,6 +234,20 @@ pub struct DirectX11Methods {
     context_vmt: Vec<*const usize>,
 }
 
+impl DirectX11Methods {
+    pub fn swapchain_vmt(&self) -> &Vec<*const usize> {
+        &self.swapchain_vmt
+    }
+
+    pub fn device_vmt(&self) -> &Vec<*const usize> {
+        &self.device_vmt
+    }
+
+    pub fn context_vmt(&self) -> &Vec<*const usize> {
+        &self.context_vmt
+    }
+}
+
 impl std::fmt::Debug for DirectX11Methods {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         writeln!(f, "DirectX11 Method Table")?;
