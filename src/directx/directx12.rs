@@ -197,6 +197,28 @@ pub struct DirectX12Methods {
     swapchain_vmt: Vec<*const usize>,
 }
 
+impl DirectX12Methods {
+    fn device_vmt(&self) -> &Vec<*const usize> {
+        &self.device_vmt
+    }
+
+    fn command_queue_vmt(&self) -> &Vec<*const usize> {
+        &self.command_queue_vmt
+    }
+
+    fn command_allocator_vmt(&self) -> &Vec<*const usize> {
+        &self.command_allocator_vmt
+    }
+
+    fn command_list_vmt(&self) -> &Vec<*const usize> {
+        &self.command_list_vmt
+    }
+
+    fn swapchain_vmt(&self) -> &Vec<*const usize> {
+        &self.swapchain_vmt
+    }
+}
+
 impl std::fmt::Debug for DirectX12Methods {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         writeln!(f, "DirectX12 Method Table")?;
